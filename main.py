@@ -9,7 +9,6 @@ from ttkthemes import ThemedTk
 def generate_password():
     characters = string.ascii_letters + string.digits + string.punctuation
     password = "".join(random.choice(characters) for i in range(var.get()))
-    output.config(text=password)
     output.config(text=password, font=("Ubuntu", 20), justify="center")
 
 
@@ -20,7 +19,7 @@ def copy_to_clipboard():
 
 
 # Create themed tkinter window
-root = ThemedTk(theme="arc")
+root = ThemedTk(theme="black")
 root.title("Password Generator")
 root.geometry("300x200")
 
